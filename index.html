@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Html Web Layout</title>
+    <link rel="stylesheet" type="text/css" href="/home/sunanda/HtmlProj/HtmlProjDesign/sass/style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/
+jquery.min.js">
+    </script>
+</head>
+
+<body>
+
+<script>
+    $(document).ready(function() {
+
+        $('#tabs li a:not(:first)').addClass('inactive');
+        $('.containert').hide();
+        $('.containert:first').show();
+        $('#tabs li a').click(function(){
+            var t = $(this).attr('href');
+            $('#tabs li a').addClass('inactive');
+            $(this).removeClass('inactive');
+            $('.containert').hide();
+            $(t).fadeIn('slow');
+            return false;
+        })
+
+        if($(this).hasClass('inactive')){ //this is the start of our condition
+            $('#tabs li a').addClass('inactive');
+            $(this).removeClass('inactive');
+            $('.containert').hide();
+            $(t).fadeIn('slow');
+        }
+    });
+</script>
+
+<div class="container">
+    <header class="main-header">
+        <div class="inner-container">
+            <div class="title-section">
+                <span class="brand-logo">FOOSESHOES</span>
+                <img src="images/SearchIcon.png" class="search-icon">
+            </div>
+
+            <div class="header-btn">
+                <button class="login-register-btn">LOGIN or REGISTER</button>
+            </div>
+
+        </div>
+    </header>
+
+    <Nav class="nav-menu">
+        <div class="inner-container">
+            <ul class="nav-left">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <ul class="nav-right">
+                <li>
+                    <a href="#">
+                        <img src="images/StarIcon.png">
+                        <img src="images/bg.png" class="star-value-bg">
+                        <img src="images/s30.png" class="star-value">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/CartIcon.png">
+                        <img src="images/bgc.png" class="cart-value-bg">
+                        <img src="images/c0.png" class="cart-value">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </Nav>
+
+    <section class="top-container">
+        <img src="images/Bg.png" class="img-size">
+        <img src="images/imgbg.png" class="img-bg img-size">
+        <img src="images/img.png" class="img-body">
+
+        <div class="top-container-desc">
+
+            <span class="item-price">
+                <img src="images/descBg.png" class="price-bg">
+                <img src="images/price.png" class="price">
+            </span>
+
+            <p class="desc-heading">
+                Pink Shoes <br> 2018 Collection
+            </p>
+
+            <p class="desc-detail">
+                Nunc non fermentum nunc. Sed ut ante<br>
+                eget leo tempor consequat sit amet eu orci.<br>
+                Donec dignissim dolor eget..
+            </p><br>
+
+            <ul class="top-action">
+                <li>
+                    <a href="#">
+                        <img src="images/topBg.png">
+                        <img src="images/EyeIcon.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/topBg.png">
+                        <img src="images/StarIcon.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/topBg.png">
+                        <img src="images/ShareIcon.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/topBg.png">
+                        <img src="images/topCartIcon.png">
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+
+    <section class="product-tab">
+
+        <div class="tabs-container ">
+            <ul id="tabs" class="inner-container">
+                <li class="tabs-list"><a href="#tab1"><span>Pink Shoes</span> <p>Now at $145.99</p></a></li>
+                <li class="tabs-list"><a href="#tab2"><span>Anna Field</span> <p>Limited Edition</p></a></li>
+                <li class="tabs-list"><a href="#tab3"><span>Prada</span> <p>Summer is coming</p></a></li>
+                <li class="tabs-list"><a href="#tab4"><span>Casadei</span> <p>All Colors available</p></a></li>
+                <li class="tabs-list"><a href="#tab5"><span>Mellow Yellow</span> <p>Free delivery</p></a></li>
+            </ul>
+
+            <div class="tabs-display-container">
+                <div class="inner-container">
+                    <div class="containert item-images-container" id="tab1">
+                        <ul class="item-images">
+                            <li>
+                                <img src="images/tabs/onSale.png"/>
+                                <span>ON SALE</span>
+                            </li>
+                            <li>
+                                <img src="images/tabs/specialOffer.png"/>
+                                <span>SPECIAL OFFERS</span>
+                            </li>
+                            <li>
+                                <img src="images/tabs/mustHave.png"/>
+                                <span>MUST HAVE</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="containert item-images-container" id="tab2">
+                        <ul class="item-images">
+                            <li>
+                                <img src="images/tabs/onSale.png"/>
+                                <span>ON SALE2</span>
+                            </li>
+                            <li>
+                                <img src="images/tabs/specialOffer.png"/>
+                                <span>SPECIAL OFFERS2</span>
+                            </li>
+                            <li>
+                                <img src="images/tabs/mustHave.png"/>
+                                <span>MUST HAVE2</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="containert item-images-container" id="tab3">
+                        <ul class="item-images">
+                            <li>
+                                <img src="images/tabs/onSale.png"/>
+                                <span>ON SALE3</span>
+                            </li>
+                            <li>
+                                <img src="images/tabs/specialOffer.png"/>
+                                <span>SPECIAL OFFERS3</span>
+                            </li>
+                            <li>
+                                <img src="images/tabs/mustHave.png"/>
+                                <span>MUST HAVE3</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="containert item-images-container" id="tab4">
+                        <ul class="item-images">
+                            <li>
+                                <img src="images/tabs/onSale.png"/>
+                                <span>ON SALE4</span>
+                            </li>
+                            <li>
+                                <img src="images/tabs/specialOffer.png"/>
+                                <span>SPECIAL OFFERS4</span>
+                            </li>
+                            <li>
+                                <img src="images/tabs/mustHave.png"/>
+                                <span>MUST HAVE4</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="containert item-images-container" id="tab5">
+                        <ul class="item-images">
+                            <li>
+                                <img src="images/tabs/onSale.png"/>
+                                <span>ON SALE5</span>
+                            </li>
+                            <li>
+                                <img src="images/tabs/specialOffer.png"/>
+                                <span>SPECIAL OFFERS5</span>
+                            </li>
+                            <li>
+                                <img src="images/tabs/mustHave.png"/>
+                                <span>MUST HAVE5</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="products-fresh-arrival">
+
+        <div class="inner-container">
+
+            <div class="new-arrival-header">
+                <label class="new-head">New arrivals on FooseShoes</label>
+                <label class="show-btn">Show All</label>
+            </div>
+
+            <ul class="product-row-first">
+                <li>
+                    <div class="product-container">
+                        <img src="images/newArrivals/Bg.png" class="product-img-bg">
+                        <img src="images/newArrivals/Img.png" class="product-img">
+                        <div class="img-desc">
+                            <img src="images/newArrivals/Rectangle.png" class="product-brand">
+                            <span class="product-img-desc">Even & Odd</span>
+                            <img src="images/newArrivals/BgP.png" class="price-bg">
+                            <img src="images/newArrivals/price.png" class="product-price">
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="product-container">
+                        <img src="images/newArrivals/Bg.png" class="product-img-bg">
+                        <img src="images/newArrivals/Img.png" class="product-img">
+                        <img src="images/newArrivals/bgSale.png" class="sale-bg">
+                        <img src="images/newArrivals/onSale.png" class="sale-text">
+                        <div class="img-desc">
+                            <img src="images/newArrivals/Rectangle.png" class="product-brand">
+                            <span class="product-img-desc">Even & Odd</span>
+                            <img src="images/newArrivals/BgP.png" class="price-bg">
+                            <img src="images/newArrivals/price.png" class="product-price">
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="product-container">
+                        <img src="images/newArrivals/Bg.png" class="product-img-bg">
+                        <img src="images/newArrivals/Img.png" class="product-img">
+                        <div class="img-desc">
+                            <img src="images/newArrivals/Rectangle.png" class="product-brand">
+                            <span class="product-img-desc">Buffallo Decolette</span>
+                            <img src="images/newArrivals/BgP.png" class="price-bg">
+                            <img src="images/newArrivals/price.png" class="product-price">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="new-arrival-header">
+                <label class="new-head">Best Sellers of the month</label>
+                <label class="show-btn">Show All</label>
+            </div>
+
+            <ul class="product-row-second container-separater">
+                <li>
+                    <div class="product-container">
+                        <img src="images/newArrivals/Bg.png" class="product-img-bg">
+                        <img src="images/newArrivals/Img.png" class="product-img">
+                        <div class="img-desc">
+                            <img src="images/newArrivals/Rectangle.png" class="product-brand">
+                            <span class="product-img-desc">Even & Odd</span>
+                            <img src="images/newArrivals/BgP.png" class="price-bg">
+                            <img src="images/newArrivals/price.png" class="product-price">
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="product-container">
+                        <img src="images/newArrivals/Bg.png" class="product-img-bg">
+                        <img src="images/newArrivals/Img.png" class="product-img">
+                        <div class="img-desc">
+                            <img src="images/newArrivals/Rectangle.png" class="product-brand">
+                            <span class="product-img-desc">Even & Odd</span>
+                            <img src="images/newArrivals/BgP.png" class="price-bg">
+                            <img src="images/newArrivals/price.png" class="product-price">
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="product-container">
+                        <img src="images/newArrivals/Bg.png" class="product-img-bg">
+                        <img src="images/newArrivals/Img.png" class="product-img">
+                        <img src="images/newArrivals/OutOfStockBg.png" class="sale-bg">
+                        <img src="images/newArrivals/outOfStock.png" class="sale-text">
+                        <div class="img-desc">
+                            <img src="images/newArrivals/Rectangle.png" class="product-brand">
+                            <span class="product-img-desc">Buffallo Decolette</span>
+                            <img src="images/newArrivals/BgP.png" class="price-bg">
+                            <img src="images/newArrivals/price.png" class="product-price">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="addons">
+
+                <ul class="addons-container">
+                    <li class="freeShipping">
+                        <span class="freeShipping-head">FREE SHIPPING</span>
+                        <p class="freeShipping-content">
+                            Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec erat sem,
+                        </p>
+                    </li>
+                    <li class="testimonials">
+                        <span class="freeShipping-head">TESTIMONIALS</span>
+                        <p class="freeShipping-content">
+                            vel, vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec erat sem, vehicula id dictum sit [...]
+                            <br>- John Doe -
+                        </p>
+                    </li>
+                    <li class="blogNews">
+                        <span class="freeShipping-head">BLOG NEWS</span>
+                        <div class="blog-content">
+                            <div class="date-section">
+                                <img src="images/BgDate.png" class="bg-date">
+                                <span class="blog-date">
+                                    Apr<br>01
+                                </span>
+                            </div>
+                            <p>
+                                <span>Nice & clean. The best for you blog!</span>
+                                Vivamus metus turpis, bibendum vitae euismod vel, vulputate
+                            </p>
+                        </div><br>
+
+                        <div class="blog-content">
+                            <div class="date-section">
+                                <img src="images/BgDate.png" class="bg-date">
+                                <span class="blog-date">
+                                    Apr<br>01
+                                </span>
+                            </div>
+                            <p>
+                                <span>What an Ecommerce theme!</span>
+                                Vulputate vel nibh. Class aptent taciti sociosqu ad litora
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-widget">
+
+        <div class="inner-container">
+            <ul class="outer-widget">
+                <li>
+                    <span class="widget-head">TEXT WIDGET</span>
+                    <p>
+                        Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+                    </p>
+                </li>
+                <li>
+                    <span class="widget-head">TWITTER WIDGET</span>
+                    <p>
+                        <p class="twitter-post"><span class="span-color">@ericafustero</span> Why thank you. Your work looks awesome by the way! @treemelody</p>
+                        <p class="twitter-date">19 days ago</p>
+                    </p>
+                    <br>
+                    <p>
+                    <p class="twitter-post"><span class="span-color">@roymarvelous</span> You can seek a refund through TF if it is not as advertised - but it is :)
+                </p>
+                    <p class="twitter-date">21 days ago</p>
+                    </p>
+                </li>
+                <li>
+                    <span class="widget-head">FLICKR WIDGET</span>
+                    <p>
+                        <img src="images/Layer.png" class="bg-date">
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="news-letter">
+            <ul class="inner-container">
+                <li class="email-letter">
+                    <div>
+                        <label class="email-btn" for="user-email">
+                            <input type="email" id="user-email" class="email-box" placeholder="Enter email for newsletter">
+                            <span>&#62;</span>
+                        </label>
+                    </div>
+                </li>
+                <li class="social-letter">
+                    <ul>
+                        <li><a href="#"><img src="images/social/Facebook.png"></a></li>
+                        <li><a href="#"><img src="images/social/Twitter.png"></a></li>
+                        <li><a href="#"><img src="images/social/G.png"></a></li>
+                        <li><a href="#"><img src="images/social/Leakedin.png"></a></li>
+                        <li><a href="#"><img src="images/social/Flickr.png"></a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+
+    </section>
+
+    <footer class="main-footer">
+        <div class="inner-container">
+            <ul>
+                <li class="copyright">
+                    <span>Copyright &copy; Fooseshoes 2013.
+                    Designed by EnzoLiVolti.</span>
+                </li>
+                <li class="footer-help">
+                    <span>Home / Support / Terms and Conditions / Faqs / Contact us</span>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+</body>
+
+</html>
